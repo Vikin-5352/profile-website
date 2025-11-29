@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vikin — Software Developer</title>
+  <meta name="description" content="Hi, I'm Vikin — full-stack developer. Welcome to my fun intro page!" />
+  <style>
+    /* Reset-ish */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter,Segoe UI,Roboto,system-ui,Arial;background:linear-gradient(180deg,#0f172a 0%,#071032 60%);color:#e6eef8;line-height:1.4}
+
+    :root{
+      --accent:#7c5cff;
+      --muted:rgba(230,238,248,.65);
+      --card:rgba(255,255,255,0.04);
+      --glass:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    }
+
+    .wrap{max-width:1100px;margin:48px auto;padding:28px}
+
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:88px;height:88px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#33d6a6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021025;font-size:28px;box-shadow:0 6px 30px rgba(124,92,255,.18)}
+
+    .intro{flex:1}
+    .name{font-size:28px;font-weight:800;letter-spacing:-0.6px}
+    .role{color:var(--muted);margin-top:6px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:22px}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;backdrop-filter: blur(6px);box-shadow:0 6px 30px rgba(2,16,37,.6)}
+
+    .about{font-size:14px;color:var(--muted)}
+
+    .actions{display:flex;gap:10px;margin-top:14px}
+    .btn{background:linear-gradient(90deg,var(--accent),#33d6a6);padding:10px 14px;border-radius:10px;color:#011027;font-weight:700;text-decoration:none;font-size:13px}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:9px 12px;border-radius:10px;text-decoration:none;font-size:13px}
+
+    /* terminal */
+    .term{background:#011021;border-radius:10px;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#9bd3ff;font-size:13px;height:200px;overflow:auto}
+    .term .line{opacity:0;transform:translateY(6px);animation:slideIn .45s forwards}
+    .term .prompt{color:#a0f0c9}
+    @keyframes slideIn{to{opacity:1;transform:none}}
+
+    /* skills */
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    /* projects */
+    .projects{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+    .project h4{font-size:15px;margin-bottom:8px}
+    .project p{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* little floating shapes */
+    .float-shape{position:fixed;pointer-events:none;filter:blur(10px);opacity:.12}
+    .f1{width:220px;height:220px;border-radius:36px;background:radial-gradient(circle at 30% 20%, #7c5cff, transparent 40%);left:-60px;top:-60px}
+    .f2{width:160px;height:160px;border-radius:32px;background:radial-gradient(circle at 60% 40%, #33d6a6, transparent 40%);right:-40px;bottom:-40px}
+
+    /* responsive */
+    @media (max-width:920px){.hero{grid-template-columns:1fr}.term{height:160px}}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+
+    /* copy button */
+    .copy{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:13px}
+
+  </style>
+</head>
+<body>
+  <div class="float-shape f1"></div>
+  <div class="float-shape f2"></div>
+
+  <main class="wrap">
+    <header>
+      <div class="avatar">V</div>
+      <div class="intro">
+        <div class="name">Vikin — Software Developer</div>
+        <div class="role">Full-stack enthusiast • Java • Node.js • Cloud • DevOps</div>
+        <div class="actions">
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="ghost" href="mailto:you@example.com">Contact</a>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="muted" style="font-size:12px">Available for freelance</div>
+        <div style="margin-top:6px"><a class="ghost" href="#resume">Download CV</a></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card about">
+          <h3 style="margin-bottom:8px">Hello 👋 — I build useful things</h3>
+          <p>I'm a software developer who loves clean architecture, automations, and making complex systems feel simple. This mini page shows a few highlights — keep scrolling or interact with the tiny terminal below.</p>
+
+          <div class="skills">
+            <div class="chip">Java</div>
+            <div class="chip">Spring Boot</div>
+            <div class="chip">Node.js</div>
+            <div class="chip">Docker</div>
+            <div class="chip">AWS</div>
+            <div class="chip">SQL</div>
+            <div class="chip">Redis</div>
+            <div class="chip">Kubernetes</div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+            <button class="ghost" id="themeToggle">Toggle Theme</button>
+            <button class="ghost" id="copyEmail">Copy Email</button>
+          </div>
+        </div>
+
+        <div id="projects" class="projects" style="margin-top:14px">
+          <div class="project">
+            <h4>OTM Lite UI</h4>
+            <p class="muted">A responsive admin UI for operations monitoring. Built with Vue.js and Tailwind.</p>
+          </div>
+          <div class="project">
+            <h4>ATOM (Apollo Tyres)</h4>
+            <p class="muted">Telemetry ingestion and analytics pipeline for fleet monitoring.</p>
+          </div>
+          <div class="project">
+            <h4>Dengine</h4>
+            <p class="muted">Ad-serving engine with custom targeting and metrics aggregation.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="muted">Live demo terminal</div>
+            <div class="muted" style="font-size:12px">Type: <span id="cmdMode">auto</span></div>
+          </div>
+          <div id="term" class="term" aria-live="polite"></div>
+
+          <div style="margin-top:12px;display:flex;gap:8px;justify-content:space-between">
+            <button class="ghost" id="runSnippet">Run snippet</button>
+            <button class="copy" id="copySnippet">Copy snippet</button>
+          </div>
+
+          <template id="snippet">
+            <code>curl -s https://api.ipify.org && echo "\nHello from Vikin!"</code>
+          </template>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="muted">Quick links</div>
+          <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+            <a class="ghost" href="https://github.com/" target="_blank">GitHub</a>
+            <a class="ghost" href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a class="ghost" href="#resume">Resume</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section style="margin-top:18px">
+      <div class="card">
+        <h3 id="resume">About & Resume</h3>
+        <p class="muted">I focus on backend systems, APIs, and scalable infrastructure. I enjoy mentoring and open-source contributions. I speak Java, Node.js, SQL, and cloud native tooling.</p>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <a class="btn" href="#contact" onclick="alert('Pretend download started :-)')">Download CV</a>
+          <a class="ghost" href="#contact">Hire me</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>Made with ❤️ by <strong>Vikin</strong></div>
+      <div class="muted">Small interactive resume • Built for fun</div>
+    </footer>
+  </main>
+
+  <script>
+    // Terminal demo lines (appear sequentially)
+    const term = document.getElementById('term');
+    const lines = [
+      {t:'prompt', s:'$ echo "Hello, I\'m Vikin — backend developer"'},
+      {t:'out', s:'Hello, I\'m Vikin — backend developer'},
+      {t:'prompt', s:'$ git clone https://github.com/yourname/project && cd project'},
+      {t:'out', s:'Cloning into \"project\"... done'},
+      {t:'prompt', s:'$ ./build.sh && ./run.sh'},
+      {t:'out', s:'Starting service on http://localhost:8080'},
+    ];
+
+    function pushLine(txt, delay=0, cls='line'){
+      const el = document.createElement('div');
+      el.className = cls;
+      if(txt.startsWith('$')){
+        el.innerHTML = '<span class="prompt">$</span> '+txt.slice(1);
+      } else el.textContent = txt;
+      setTimeout(()=>{
+        term.appendChild(el);
+        term.scrollTop = term.scrollHeight;
+      }, delay);
+    }
+
+    // auto-play lines with small delay
+    lines.forEach((l,i)=>{
+      pushLine(l.s, 350 + i*650);
+    });
+
+    // buttons
+    document.getElementById('runSnippet').addEventListener('click', ()=>{
+      const snippet = document.getElementById('snippet').textContent.trim();
+      pushLine('$ '+snippet, 0);
+      pushLine('Output: (demo) 203.0.113.45', 200);
+    });
+
+    document.getElementById('copySnippet').addEventListener('click', async ()=>{
+      const text = document.getElementById('snippet').textContent.trim();
+      await navigator.clipboard.writeText(text);
+      alert('Snippet copied to clipboard');
+    });
+
+    document.getElementById('copyEmail').addEventListener('click', async ()=>{
+      await navigator.clipboard.writeText('you@example.com');
+      alert('Email copied');
+    });
+
+    // small theme toggle (switch to light-ish)
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      if(document.body.style.background.includes('#0f172a')){
+        document.body.style.background = 'linear-gradient(180deg,#f7f9ff,#eef2ff)';
+        document.body.style.color = '#021025';
+      } else {
+        document.body.style.background = 'linear-gradient(180deg,#0f172a 0%,#071032 60%)';
+        document.body.style.color = '#e6eef8';
+      }
+    });
+
+    // copy email fallback for older browsers
+    // small accessibility: announce mode
+    const cmdMode = document.getElementById('cmdMode');
+    cmdMode.textContent = 'demo';
+  </script>
+</body>
+</html>
